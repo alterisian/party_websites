@@ -1,0 +1,66 @@
+UK Constituency Email Scraper
+
+Purpose:
+This project aims to scrape email addresses from the websites of various political parties across UK parliamentary constituencies. It automates the process of discovering URLs, scraping emails, and logging the results.
+
+Dependencies:
+- requests
+- beautifulsoup4
+- pandas
+- googlesearch-python
+
+You can install these dependencies using pip:
+pip install requests beautifulsoup4 pandas googlesearch-python
+
+Assets:
+1. all_uk_constituencies.csv
+   - Description: This file contains the complete list of all 650 UK parliamentary constituencies.
+   - Usage: It serves as the master list from which we select the next constituencies to search for emails.
+
+2. emails.txt
+   - Description: This file logs all the found email addresses along with their corresponding constituency and party.
+   - Usage: It acts as the output file where the results of the email scraping are saved.
+
+3. get_all_uk_constituencies.py
+   - Description: This script reads the all_uk_constituencies.csv file and extracts the next batch of constituencies that have not been searched yet.
+   - Usage: It helps in managing the flow of which constituencies need to be processed next by checking against searched_constituencies.txt.
+
+4. scrape_emails.py
+   - Description: This script is responsible for scraping the websites listed in websites_queue.txt to find email addresses.
+   - Usage: It reads the URLs from websites_queue.txt, performs the scraping, and logs the found emails in emails.txt. It also updates searched_constituencies.txt to keep track of processed constituencies.
+
+5. searched_constituencies.txt
+   - Description: This file keeps a record of all the constituencies that have already been searched for email addresses.
+   - Usage: It ensures that we do not process the same constituency more than once. The script get_all_uk_constituencies.py reads this file to determine the next batch of constituencies to be processed.
+
+6. websites_queue.txt
+   - Description: This file contains the list of URLs for each party's website in each constituency that needs to be scraped for email addresses.
+   - Usage: It serves as the input for scrape_emails.py, providing the URLs that need to be processed.
+
+7. discover_websites.py
+   - Description: This script helps to discover party websites for the next batch of constituencies using Google search.
+   - Usage: It automates the process of finding and logging the URLs into websites_queue.txt.
+
+Process:
+Step 1: Initialize the Queue
+1. Prepare all_uk_constituencies.csv: Ensure it contains the complete list of constituencies.
+2. Run get_all_uk_constituencies.py: This script reads all_uk_constituencies.csv and determines the next 10 constituencies that have not yet been searched. It updates websites_queue.txt with these constituencies and their respective party URLs.
+
+Step 2: Discover Websites
+1. Run discover_websites.py: This script uses Google search to find the URLs for the next batch of constituencies and logs them into websites_queue.txt.
+2. Verify URLs: Manually verify the URLs in websites_queue.txt to ensure they are correct.
+
+Step 3: Scrape Emails
+1. Run scrape_emails.py: This script reads websites_queue.txt, scrapes the websites for email addresses, and logs the results in emails.txt.
+2. Update searched_constituencies.txt: The script also updates this file to keep track of processed constituencies.
+
+How to Run:
+1. Prepare the Files:
+   - Ensure all_uk_constituencies.csv is complete.
+   - Create empty searched_constituencies.txt and emails.txt files if they don't exist.
+
+2. Run the Scripts:
+   - Run get_all_uk_constituencies.py to initialize the queue.
+   - Run discover_websites.py to find and log websites.
+   - Verify the URLs in websites_queue.txt.
+   - Run scrape_emails.py to scrape emails and log results.
