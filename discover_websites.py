@@ -3,32 +3,44 @@ import pandas as pd
 import time
 
 # Function to search Google and return the first result URL
-def google_search(query):
-    try:
-        # Perform the search and convert the generator to a list
-        search_results = list(search(query, num_results=1))
-        
-        # Return the first result
-        return search_results[0] if search_results else None
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return None
+def google_search(query, retries=5, backoff_factor=1, initial_sleep=1):
+    sleep_time = initial_sleep
+    for attempt in range(retries):
+        try:
+            # Perform the search and convert the generator to a list
+            search_results = list(search(query, num_results=1))
+            
+            # Return the first result
+            return search_results[0] if search_results else None
+        except Exception as e:
+            if "429" in str(e):
+                wait_time = sleep_time * (2 ** attempt)
+                print(f"Too many requests. Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+                if attempt == retries - 1:  # If it's the last retry
+                    sleep_time = 2  # Increase default sleep time to 2 seconds for future requests
+            else:
+                print(f"An error occurred: {e}")
+                break
+    return None
 
 # Function to find party websites for a given constituency
-def find_party_websites(constituency):
+def find_party_websites(constituency, default_sleep=1):
     party_websites = {}
     parties = {"Labour": "Labour", "Green": "Green Party", "LibDem": "Liberal Democrats"}
     
     for party_short, party_full in parties.items():
-        query = f"{constituency} {party_full} party website"
+        query = f"{constituency} {party_full} website"
         print(f"  Searching for {party_full} website...")
-        url = google_search(query)
+        url = google_search(query, initial_sleep=default_sleep)
         if url:
             party_websites[party_short] = url
             print(f"    Found {party_full} website: {url}")
         else:
             print(f"    No {party_full} website found.")
-        time.sleep(1)  # Respectful delay to avoid being blocked
+            with open('no_websites.txt', 'a') as no_web_file:
+                no_web_file.write(f"{constituency}, {party_full}\n")
+        time.sleep(default_sleep)  # Default delay between requests
 
     return party_websites
 
@@ -59,9 +71,11 @@ next_constituencies = [c for c in constituencies_df['Constituency'] if c not in 
 
 # Find and log party websites for the next 10 constituencies
 websites = {}
+default_sleep = 1  # Initialize default sleep time
 for constituency in next_constituencies:
     print(f"Searching websites for: {constituency}")
-    websites[constituency] = find_party_websites(constituency)
+    websites[constituency] = find_party_websites(constituency, default_sleep=default_sleep)
+    default_sleep = 2  # Increase default sleep time to 2 seconds for the next batch
 
 # Update websites_queue.txt with found websites
 with open('websites_queue.txt', 'a') as file:
