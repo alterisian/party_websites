@@ -1,0 +1,62 @@
+Bath:
+  Labour:
+  Green:
+  LibDem:
+
+Birmingham, Edgbaston:
+  Labour:
+  Green:
+  LibDem:
+    data.protection@libdems.org.uk
+    hello@birminghamlibdems.org.uk
+
+Cambridge:
+  Labour:
+  Green:
+  LibDem:
+    data.protection@libdems.org.uk
+    info@cambridgelibdems.org.uk
+
+Cardiff Central:
+  Labour:
+  Green:
+  LibDem:
+    data.protection@libdems.org.uk
+
+Glasgow Central:
+  Labour:
+  Green:
+  LibDem:
+    data.protection@libdems.org.uk
+  SNP:
+
+Leeds West:
+  Labour:
+  Green:
+    contact@leeds.greenparty.org.uk
+  LibDem:
+    data.protection@libdems.org.uk
+
+Manchester Central:
+  Labour:
+  Green:
+  LibDem:
+    data.protection@libdems.org.uk
+
+Norwich South:
+  Labour:
+  Green:
+    jameskillbery@gmail.com
+    enquiries@norwichgreenparty.org
+  LibDem:
+
+Oxford East:
+  Labour:
+  Green:
+  LibDem:
+
+Plymouth, Sutton and Devonport:
+  Labour:
+  Green:
+  LibDem:
+

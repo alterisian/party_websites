@@ -1,0 +1,221 @@
+Electoral Area
+Aberavon
+Aberconwy
+Aberdeen North
+Aberdeen South
+Airdrie and Shotts
+Aldershot
+Aldridge-Brownhills
+Altrincham and Sale West
+Alyn and Deeside
+Amber Valley
+Angus
+Arfon
+Argyll and Bute
+Arundel and South Downs
+Ashfield
+Ashford
+Ashton-under-Lyne
+Aylesbury
+Ayr, Carrick and Cumnock
+Banbury
+Banff and Buchan
+Barking
+Barnsley Central
+Barnsley East
+Barrow and Furness
+Basildon and Billericay
+Basingstoke
+Bassetlaw
+Bath
+Batley and Spen
+Battersea
+Beaconsfield
+Beckenham
+Bedford
+Belfast East
+Belfast North
+Belfast South
+Belfast West
+Bermondsey and Old Southwark
+Berwickshire, Roxburgh and Selkirk
+Berwick-upon-Tweed
+Bethnal Green and Bow
+Beverley and Holderness
+Bexhill and Battle
+Bexleyheath and Crayford
+Birkenhead
+Birmingham, Edgbaston
+Birmingham, Erdington
+Birmingham, Hall Green
+Birmingham, Hodge Hill
+Birmingham, Ladywood
+Birmingham, Northfield
+Birmingham, Perry Barr
+Birmingham, Selly Oak
+Birmingham, Yardley
+Bishop Auckland
+Blackburn
+Blackley and Broughton
+Blackpool North and Cleveleys
+Blackpool South
+Blaenau Gwent
+Blaydon
+Blyth Valley
+Bognor Regis and Littlehampton
+Bolsover
+Bolton North East
+Bolton South East
+Bolton West
+Bootle
+Boston and Skegness
+Bosworth
+Bournemouth East
+Bournemouth West
+Bracknell
+Bradford East
+Bradford South
+Bradford West
+Braintree
+Brecon and Radnorshire
+Brent Central
+Brent North
+Brentford and Isleworth
+Brentwood and Ongar
+Bridgend
+Bridgwater and West Somerset
+Brigg and Goole
+Brighton, Kemptown
+Brighton, Pavilion
+Bristol East
+Bristol North West
+Bristol South
+Bristol West
+Broadland
+Bromley and Chislehurst
+Bromsgrove
+Broxbourne
+Broxtowe
+Buckingham
+Burnley
+Burton
+Bury North
+Bury South
+Bury St Edmunds
+Caerphilly
+Caithness, Sutherland and Easter Ross
+Calder Valley
+Camberwell and Peckham
+Camborne and Redruth
+Cambridge
+Cannock Chase
+Canterbury
+Cardiff Central
+Cardiff North
+Cardiff South and Penarth
+Cardiff West
+Carlisle
+Carmarthen East and Dinefwr
+Carmarthen West and South Pembrokeshire
+Carshalton and Wallington
+Castle Point
+Central Ayrshire
+Central Devon
+Central Suffolk and North Ipswich
+Ceredigion
+Charnwood
+Chatham and Aylesford
+Cheadle
+Chelmsford
+Chelsea and Fulham
+Cheltenham
+Chesham and Amersham
+Chesterfield
+Chichester
+Chingford and Woodford Green
+Chippenham
+Chipping Barnet
+Chorley
+Christchurch
+Cities of London and Westminster
+City of Chester
+City of Durham
+Clacton
+Cleethorpes
+Clwyd South
+Clwyd West
+Coatbridge, Chryston and Bellshill
+Colchester
+Colne Valley
+Congleton
+Copeland
+Corby
+Coventry North East
+Coventry North West
+Coventry South
+Crawley
+Crewe and Nantwich
+Croydon Central
+Croydon North
+Croydon South
+Cumbernauld, Kilsyth and Kirkintilloch East
+Cynon Valley
+Dagenham and Rainham
+Darlington
+Dartford
+Daventry
+Delyn
+Denton and Reddish
+Derby North
+Derby South
+Derbyshire Dales
+Devizes
+Dewsbury
+Don Valley
+Doncaster Central
+Doncaster North
+Dover
+Dudley North
+Dudley South
+Dulwich and West Norwood
+Dumfries and Galloway
+Dumfriesshire, Clydesdale and Tweeddale
+Dundee East
+Dundee West
+Dunfermline and West Fife
+Ealing Central and Acton
+Ealing North
+Ealing, Southall
+Easington
+East Antrim
+East Devon
+East Dunbartonshire
+East Ham
+East Hampshire
+East Kilbride, Strathaven and Lesmahagow
+East Londonderry
+East Lothian
+East Renfrewshire
+East Surrey
+East Worthing and Shoreham
+East Yorkshire
+Eastleigh
+Eddisbury
+Edinburgh East
+Edinburgh North and Leith
+Edinburgh South
+Edinburgh South West
+Edinburgh West
+Edmonton
+Ellesmere Port and Neston
+Elmet and Rothwell
+Eltham
+Enfield North
+Enfield, Southgate
+Epping Forest
+Epsom and Ewell
+Erewash
+Erith and Thamesmead
+Esher and Walton
+Exeter
+

@@ -67,7 +67,7 @@ print(f"Number of constituencies in queue: {num_in_queue}")
 print(f"Number of constituencies already searched: {num_searched}")
 
 # Get the next 10 constituencies that have not been searched yet
-next_constituencies = [c for c in constituencies_df['Constituency'] if c not in searched_constituencies][:10]
+next_constituencies = [c for c in constituencies_df['Constituency'] if c not in searched_constituencies][:4]
 
 # Find and log party websites for the next 10 constituencies
 websites = {}

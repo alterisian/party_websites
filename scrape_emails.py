@@ -2,61 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-# List of party websites by constituency
-websites = {
-    "Bath": {
-        "Labour": "https://www.bathlabour.org.uk",
-        "Green": "https://bath.greenparty.org.uk",
-        "LibDem": "https://www.bathlibdems.org.uk"
-    },
-    "Birmingham, Edgbaston": {
-        "Labour": "https://www.birmingham-labour.org.uk",
-        "Green": "https://birmingham.greenparty.org.uk",
-        "LibDem": "https://www.birminghamlibdems.org.uk"
-    },
-    "Cambridge": {
-        "Labour": "https://www.cambridgelabour.org.uk",
-        "Green": "https://cambridge.greenparty.org.uk",
-        "LibDem": "https://www.cambridgelibdems.org.uk"
-    },
-    "Cardiff Central": {
-        "Labour": "https://www.cardifflabour.org.uk",
-        "Green": "https://cardiff.greenparty.org.uk",
-        "LibDem": "https://www.cardiffld.org.uk"
-    },
-    "Glasgow Central": {
-        "Labour": "https://www.glasgowlabour.org.uk",
-        "Green": "https://glasgow.greenparty.org.uk",
-        "LibDem": "https://www.glasgowlibdems.org.uk",
-        "SNP": "https://www.glasgowsnp.org"
-    },
-    "Leeds West": {
-        "Labour": "https://www.leedslabour.org.uk",
-        "Green": "https://leeds.greenparty.org.uk",
-        "LibDem": "https://www.leedslibdems.org.uk"
-    },
-    "Manchester Central": {
-        "Labour": "https://www.manchesterlabour.org.uk",
-        "Green": "https://manchester.greenparty.org.uk",
-        "LibDem": "https://www.mcrlibdems.uk"
-    },
-    "Norwich South": {
-        "Labour": "https://www.norwichlabour.org.uk",
-        "Green": "https://norwich.greenparty.org.uk",
-        "LibDem": "https://norwichlibdems.org.uk"
-    },
-    "Oxford East": {
-        "Labour": "https://www.oxfordlabour.org.uk",
-        "Green": "https://www.greenoxford.com",
-        "LibDem": "https://www.oxonlibdems.uk"
-    },
-    "Plymouth, Sutton and Devonport": {
-        "Labour": "https://www.plymouthlabour.org",
-        "Green": "https://plymouth.greenparty.org.uk",
-        "LibDem": "https://www.plymouthlibdems.org.uk"
-    }
-}
-
 # Function to scrape emails from a given URL
 def scrape_emails(url):
     try:
@@ -79,6 +24,26 @@ def scrape_emails(url):
     except requests.exceptions.RequestException as e:
         print(f"Error accessing {url}: {e}")
         return set()
+
+# Read websites from the file
+websites = {}
+file_path = 'websites_queue.txt'
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+for line in lines:
+    line = line.strip()
+    parts = line.split(', ')
+    if len(parts) == 3:
+        area, party, url = parts
+    elif len(parts) == 4:
+        area = f"{parts[0]}, {parts[1]}"
+        party = parts[2]
+        url = parts[3]
+    
+    if area not in websites:
+        websites[area] = {}
+    websites[area][party] = url
 
 # Scraping emails from all listed websites
 all_emails = {}
